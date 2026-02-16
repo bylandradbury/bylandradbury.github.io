@@ -1,0 +1,20 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
