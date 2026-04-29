@@ -180,6 +180,8 @@ function updateVolumes() {
 
     audio.volume += (target - audio.volume) * 0.08;
 
+    console.log(audio.volume);
+
     const blob = node.querySelector("path");
 
     if (blob) {
