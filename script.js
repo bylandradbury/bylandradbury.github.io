@@ -103,8 +103,10 @@ const nodes = [];
 document.querySelectorAll(".node").forEach(node => {
   const audio = new Audio();
 
-  audio.src = node.dataset.audio;   // 👈 explicit
-  audio.preload = "auto";           // 👈 force load
+  audio.src = node.dataset.audio;
+  audio.preload = "auto";           
+  audio.load();                    
+  
   audio.loop = true;
   audio.volume = 0;
 
