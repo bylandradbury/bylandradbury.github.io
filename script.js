@@ -101,19 +101,15 @@ viewport.addEventListener("wheel", (e) => {
 const nodes = [];
 
 document.querySelectorAll(".node").forEach(node => {
-  const audio = new Audio(node.dataset.audio);
+  const audio = new Audio();
+
+  audio.src = node.dataset.audio;   // 👈 explicit
+  audio.preload = "auto";           // 👈 force load
   audio.loop = true;
   audio.volume = 0;
 
   nodes.push({ node, audio });
 });
-
-// unlock audio
-window.addEventListener("click", () => {
-  nodes.forEach(({ audio }) => {
-    if (audio.paused) audio.play().catch(() => {});
-  });
-}, { once: true });
 
 // --------------------
 // NODE DRAG (FIXED)
