@@ -104,14 +104,20 @@ document.querySelectorAll(".node").forEach(node => {
   const audio = new Audio();
 
   audio.src = node.dataset.audio;
-  audio.preload = "auto";           
-  audio.load();                    
-  
+  audio.preload = "auto";
+  audio.load();
+
   audio.loop = true;
   audio.volume = 0;
 
   nodes.push({ node, audio });
 });
+
+window.addEventListener("click", () => {
+  nodes.forEach(({ audio }) => {
+    if (audio.paused) audio.play().catch(() => {});
+  });
+}, { once: true });
 
 // --------------------
 // NODE DRAG (FIXED)
