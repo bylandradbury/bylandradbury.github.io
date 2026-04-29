@@ -113,9 +113,11 @@ document.querySelectorAll(".node").forEach(node => {
   nodes.push({ node, audio });
 });
 
-window.addEventListener("click", () => {
-  nodes.forEach(({ audio }) => {
-    if (audio.paused) audio.play().catch(() => {});
+window.addEventListener("pointerdown", () => {
+  nodes.forEach(({ node, audio }) => {
+    audio.src = node.dataset.audio;  // ensure correct file
+    audio.load();
+    audio.play().catch(err => console.log(err));
   });
 }, { once: true });
 
