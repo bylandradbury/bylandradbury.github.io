@@ -260,6 +260,7 @@ function updateCloudLight() {
 // LOOP
 // --------------------
 function animate() {
+  console.log("loop running");
   updateVolumes();
   updateCloudParallax();
   updateCloudLight();
