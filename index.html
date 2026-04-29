@@ -1,28 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dylan – Test Site</title>
+  <title>Audio Clouds</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <header>
-    <h1>Dylan</h1>
-    <p>Testing AudioSpaces + web experiments</p>
-  </header>
+<div id="viewport">
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="writing.html">Writing</a>
-    <a href="embeds.html">Embeds</a>
-  </nav>
+  <!-- CLOUDS (full screen background) -->
+  <div id="clouds">
+    <div class="cloud-layer back"></div>
+    <div class="cloud-layer front"></div>
+  </div>
 
-  <main>
-    <h2>Welcome</h2>
-    <p>This is my test environment.</p>
-  </main>
+  <div id="map">
+    <!-- NODE 1 -->
+    <div class="node" data-audio="sounds/Abbey Gardens.wav" style="top:500px; left:600px">
+      <svg viewBox="0 0 100 100" class="blob">
+        <path d="M50,10 Q80,20 90,50 Q80,80 50,90 Q20,80 10,50 Q20,20 50,10 Z"></path>
+      </svg>
+    </div>
 
+    <!-- NODE 2 -->
+    <div class="node" data-audio="sounds/im_in__the__bath__again.mp3" style="top: 500px; left: 300px;">
+      <svg viewBox="0 0 100 100" class="blob">
+        <path d="M50,15 Q75,25 85,50 Q75,75 50,85 Q25,75 15,50 Q25,25 50,15 Z"></path>
+      </svg>
+    </div>
+
+    <!-- NODE 3 -->
+    <div class="node" data-audio="sounds/sonicsnooze.wav" style="top: 600px; left: 500px;">
+      <svg viewBox="0 0 100 100" class="blob">
+        <path d="M50,12 Q78,18 88,50 Q78,82 50,88 Q22,82 12,50 Q22,18 50,12 Z"></path>
+      </svg>
+    </div>
+
+    <!-- NODE 4 -->
+    <div class="node" data-audio="sounds/EFX_EXT_Car_Stress_Creaks_03_C.wav" style="top: 800px; left: 800px;">
+      <svg viewBox="0 0 100 100" class="blob">
+        <path d="M50,12 Q78,18 88,50 Q78,82 50,88 Q22,82 12,50 Q22,18 50,12 Z"></path>
+      </svg>
+    </div>
+
+     <!-- NODE 5 -->
+     <div class="node" data-audio="sounds/cantos de pájaros maquinales - mutter mutter beep beep periodistas.wav" style="top: 400px; left: 400px;">
+      <svg viewBox="0 0 100 100" class="blob">
+        <path d="M50,12 Q78,18 88,50 Q78,82 50,88 Q22,82 12,50 Q22,18 50,12 Z"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
