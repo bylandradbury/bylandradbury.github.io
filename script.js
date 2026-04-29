@@ -113,12 +113,6 @@ document.querySelectorAll(".node").forEach(node => {
   nodes.push({ node, audio });
 });
 
-window.addEventListener("click", () => {
-  nodes.forEach(({ audio }) => {
-    if (audio.paused) audio.play().catch(() => {});
-  });
-}, { once: true });
-
 // --------------------
 // NODE DRAG (FIXED)
 // --------------------
